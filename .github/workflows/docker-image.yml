@@ -28,6 +28,6 @@ jobs:
         run: |
           docker buildx build \
             --file build/Dockerfile \
-            --tag ckdh0799/python-app:${{ github.run_number }} \
+            --tag ckdh0799/python-app:latest \
             --push \
             .
