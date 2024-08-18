@@ -25,9 +25,6 @@ jobs:
             #docker stop python-appghactions || true
             #docker rm python-appghactions || true
             
-            # Pull the latest Docker image
-            #docker pull ckdh0799/python-app:${{ github.event.workflow_run.head_run_number }}
-            
             # Run the new Docker container
-            docker run -itd --name python-appghactions -p 6000:5000 ckdh0799/python-app:${{ github.event.workflow_run.head_run_number }}
+            docker run -itd --name python-appghactions -p 6000:5000 ckdh0799/python-app:latest
           EOF
