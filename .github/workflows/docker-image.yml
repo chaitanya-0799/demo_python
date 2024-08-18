@@ -26,5 +26,8 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker buildx build . --file build/Dockerfile -t ckdh0799/python-app:${{ github.run_number }}
-          docker push ckdh0799/python-app:${{ github.run_number }}
+          docker buildx build \
+            --file build/Dockerfile \
+            --tag ckdh0799/python-app:${{ github.run_number }} \
+            --push \
+            .
