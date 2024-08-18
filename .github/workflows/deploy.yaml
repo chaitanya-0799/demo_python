@@ -22,8 +22,8 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@43.204.96.32 << 'EOF'
             # Stop and remove the existing container if it exists
-            docker stop python-appghactions || true
-            docker rm python-appghactions || true
+            #docker stop python-appghactions || true
+            #docker rm python-appghactions || true
             
             # Pull the latest Docker image
             docker pull ckdh0799/python-app:${{ github.event.workflow_run.head_run_number }}
