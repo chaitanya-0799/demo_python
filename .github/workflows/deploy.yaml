@@ -20,7 +20,7 @@ jobs:
 
       - name: Deploy Docker image to server
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@3.111.53.126 << 'EOF'
+          ssh -o StrictHostKeyChecking=no ubuntu@3.110.123.62 << 'EOF'
             # Stop and remove the existing container if it exists
             docker stop python-appghactions || true
             docker rm python-appghactions || true
