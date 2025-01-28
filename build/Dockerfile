@@ -4,6 +4,7 @@ FROM python:3.9.19
 ARG srcDir=src
 WORKDIR /app
 COPY $srcDir/requirements.txt .
+#Installing requirements 
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY $srcDir/run.py .
