@@ -15,9 +15,9 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                sh 'docker stop python || true'
-                sh 'docker rm python || true'
-                sh 'docker run -itdp 800:5000 python:latest --name demo-python '
+                sh 'docker stop demo-python || true'
+                sh 'docker rm demo-python || true'
+                sh 'docker run -itdp 800:5000 --name demo-python python:latest '
             }
         }
     }
