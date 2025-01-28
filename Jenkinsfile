@@ -8,7 +8,7 @@ pipeline {
         }
         stage('pull'){
             steps {
-                sh 'docker build -t ypp:lat -f /build/Dockerfile .'
+                sh 'docker build -t ypp:lat -f build/Dockerfile .'
             }
         }
         
