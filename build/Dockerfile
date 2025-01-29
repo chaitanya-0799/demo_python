@@ -1,4 +1,4 @@
-FROM python:3.9.19
+FROM python:3.11-slim
 
 
 ARG srcDir=src
